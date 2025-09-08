@@ -1,0 +1,159 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background:black;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Section Base Styles */
+.section {
+  width: 100%;
+  padding: 2rem 1rem;
+  position: relative;
+  min-height: 100vh;
+}
+
+.section-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Wrapper Layout */
+.wrapper {
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+}
+
+/* Galleries */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding: 0.2rem;
+  margin-top: 150px;
+}
+
+.gallery img {
+  border-radius: 8px;
+  object-fit: cover;
+  max-width: 85px;
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05) rotate(0deg);
+}
+
+/* Center Content */
+.center {
+  text-align: center;
+  color: white;
+  
+}
+
+.center p {
+  margin-top: 3rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Flip Text Animation */
+.flip-text {
+  position: relative;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10rem;
+  font-weight: bold;
+}
+
+.flip-text span {
+  position: absolute;
+  opacity: 0;
+  animation: fadeText 4s infinite;
+}
+
+.flip-text .text1 {
+  animation-delay: 0s;
+}
+
+.flip-text .text2 {
+  animation-delay: 2s;
+}
+
+@keyframes fadeText {
+  0%, 45% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Hero Section */
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+
+}
+
+
+.hero-content h1 {
+  font-size: 3rem;    
+  line-height: 1.2;        
+  padding: 0 1rem;      
+  text-align: left;   
+  width: 100%;
+  margin-right: 400px;
+  justify-content: left;
+ color: white;
+ 
+}
+
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  color: white;
+  margin-top: 50px;
+}
+
+/* Navigation Buttons */
+.nav button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.nav button:hover {
+  background: #555;
+}
